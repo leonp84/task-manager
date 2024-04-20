@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="deep-purple-text text-darken-2 center-align">Delete Category</h3>
+
+
+    <div class="row card-panel grey lighten-5">
+        <form class="col s12" method="POST" action="{{ url_for('delete_category', category_id=category.id) }}">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Type 'yes' if you want to delete this item." name="category_name" type="text" class="validate" minlength="3" maxlength="25" required>
+                        <label for="category_name">You are about to delete "<strong>{{ category.category_name }}</strong>"</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center-align col s12">
+                        <button type="submit" class="btn-large light-blue darken-1">
+                            Delete Category <i class="fas fa-edit right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        {% endblock %}
