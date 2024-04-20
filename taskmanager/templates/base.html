@@ -12,7 +12,7 @@
 
         <header>
             <nav class="deep-purple lighten-2">
-                <div >
+                <div class="nav-wrapper">
                     <a href="#!" class="brand-logo">Task Manager</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                         <i class="fas fa-bars"></i>
@@ -25,7 +25,7 @@
                             <a href="">New Task</a>
                         </li>
                         <li>
-                            <a href="">Categories</a>
+                            <a href="{{ url_for('categories') }}">Categories</a>
                         </li>
                     </ul>
                 </div>
@@ -39,12 +39,12 @@
                     <a href="">New Task</a>
                 </li>
                 <li>
-                    <a href="">Categories</a>
+                    <a href="{{ url_for('categories') }}">Categories</a>
                 </li>
             </ul>
         </header>
 
-        <main class="container"> {%  block content %}{%  endblock %}
+        <main class="container"> {% block content %}{% endblock %}
 
             </main>
 
@@ -52,7 +52,7 @@
                 <div class="footer-copyright">
                     <div class="container" id="current-year">
                         © 2014 Copyright Text
-                        </div>
+                    </div>
                 </div>
             </footer>
 
